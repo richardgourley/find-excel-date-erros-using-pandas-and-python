@@ -8,13 +8,18 @@ This tool shows how Python and Pandas can be used to take a set of data from exc
 The scipt then filters the data and creates a new file of all rows with invalid date information.
 
 ## GETTING STARTED
-The first file generates a 2000 row dataset containing string columns and a date column with an employee start date using Numpy and Pandas. 
+### 1-generate-employee-data.ipynb
+- Run this file first.
+- This creates a 2000 row employee data file with names and date started.
+- Numpy is used to generate employee names and random dates into the date started column.
+- It inserts random errors such as wrong data types and empty strings into the date started column.
+- It saves the data file to be used in file 2...
 
-Some of the date columns in the file are overriden by strings, empty strings and integers.
-
-The second file is the tool that opens the first file, finds all NaN data, finds all integers and strings and creates a new column called 'Valid Start Date' with True or False for the 'Date Started' column.
-
-A new file containing the row numbers of the date errors is created and can be sent to a team member for correcton.
+### 2-create-invalid-dates-report.ipynb
+- It opens the file generated above.
+- It finds and converts all 'NaN' values to a string.
+- It creates a new column called 'Valid Start Date' and asesses all fields from the 'Date Started' column and inserts a boolean into the new 'Valid Start Date' declaring if the date is valid.
+- A new file is created highlighting the row numbers which have dates that need fixing.
 
 ## SKILLS COVERED
 Packages and methods
