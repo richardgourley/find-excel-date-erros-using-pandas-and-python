@@ -17,7 +17,7 @@ The scipt then filters the data and creates a new file of all rows with invalid 
 
 ### 2-create-invalid-dates-report.ipynb
 - It opens the file generated above.
-- It finds and converts all 'NaN' values to a string.
+- Empty strings are converted to 'NaN' values, so an action in this file is to convert all 'NaN' values to a string (Assessing if a string or int is a date type is easier than with 'NaN' types.)
 - It creates a new column called 'Valid Start Date' and asesses all fields from the 'Date Started' column and inserts a boolean into the new 'Valid Start Date' declaring if the date is valid.
 - A new file is created highlighting the row numbers which have dates that need fixing.
 
